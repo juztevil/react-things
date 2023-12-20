@@ -1,0 +1,166 @@
+Js ES6 features
+	1)  Arrow functions
+	2)  Classes
+	3)  Destructuring(variable,arrar,object)
+	4)  Template literals
+	5)  Default parameters
+	6)  Promises
+	7)  Modules
+	8)  const
+	9)  Enhanced object literals
+	10) String
+	11) Arrays
+	12) Spread syntax
+	13) Rest Parameters
+	14) Spread operator
+	15) Generators
+	16) Let keyword
+	17) Modules in ES6
+	18) import and export
+	19) Objects
+	20) symbols
+	21) variables
+
+2) Classes
+	class hello{
+
+	    constructor(name,lastname="okie"){
+
+	        this.name=name;
+
+	        this.lastname=lastname;
+
+	    }
+	
+    getName(){
+	
+        return `${this.name} ${this.lastname}`;
+
+	    }
+	
+}
+
+	let obj1=new hello("hari");
+	console.log(obj1.getName())	//hari okie
+
+	class hello{
+
+	    constructor(name,lastname="okie"){
+
+	        this.name=name;
+
+	        this.lastname=lastname;
+
+	    }
+	
+    getName(){
+	
+        return `${this.name} ${this.lastname}`;
+
+	    }
+	
+}
+
+	let obj1=new hello("hari","krishna");
+	console.log(obj1.getName())	//hari krishna
+
+
+3) Destructuring(can be used for swapping)
+	array
+		ex)
+			let a=[1,2,3];
+			let [b,c]=a;
+			console.log(b,c)	//1,2
+		
+			let[,b,c]=a
+			console.log(b,c)	//2,3
+	
+			let[,,b]=a
+			console.log(b)		//3
+
+			let [,,,b]=a
+			console.log(b)		//undefined
+	objects(destructuring variables should be same as object keys(variables))
+		ex)
+			let obj={color:"red",number:12}
+			let{number,color}=obj
+			console.log(color,number);	//red 12
+	
+			let{number}=obj
+			console.log(number);		//12
+	swapping
+		let a=12;
+		let b=7;
+		[b,a]=[a,b]
+		console.log(a,b)	//7 12
+		
+
+
+4) Template Literal(works with back tick only)
+	syntax : ${}
+	ex)
+	let a=10,b=12
+	console.log(`A:${a},B:${b}`)	//A:10,B:12
+	
+	let a=`hello`
+	console.log(`A:${a}`)		//a is not defined
+
+
+5) Default parameters
+	ex)
+	function mul(a=1,b=1){
+		return a*b;
+	}
+	console.log(mul())	//1
+	console.log(mul(12,7))  //84
+	console.log(mul(12))	//12
+
+9) Enhanced object literals
+	let name="hello", age=12;
+	let obj={name,age};
+	console.log(name,obj)		//{name:"hello",age:12}
+	
+	function objmaker(name,number){
+		return {name,number};
+	}
+	console.log(objmaker("hello",12))	//{name:"hello",number:12}
+10) String
+	in js we can create only single line string like var a="this is a single line string";
+	but using back tick(`) we can create multiline strings.
+	let a=`hello
+		wordle`;
+	console.log(a)
+but we cant let a="hello
+		world"
+	console.log(a)
+
+11) Arrays
+	methods
+		1)push()--append at end
+		2)pop()--delete at end
+		3)shift()--delete at front
+		4)unshift()--append at front
+		5).length--gives length of array in number datatype
+		6)Object.keys(arrayname)--return indexes in string format
+		7) deleting the array element -- arrayname.length=2(array shrinked to 2 elements)
+		8).reverse()--reversing the array
+		9) arr="string,integer,boolean".split(",")   ===>string to array
+		10)string=array.join(",")		     ===>array to string
+	indexing  --  a[0] or a['0']
+
+14) spread operator(...)
+	used to pass an entire array or object to a function by not passing the array, copying one array to another array
+		we can assign a array to object		//{index:value}
+		we cant assign a object to array	//obj is not iterable
+
+
+16) let,const,var		(without any keyword it takes var as keyword)
+	var -> function scope, can be used before declaration like....  (let may not have initialization part, but const should have it)
+		console.log(a);
+		var a=10;		// shows undefined
+	but let and const have block scope can't be used before declaration;				10/0 => infinity
+		console.log(a);										00   => NaN(not a number)
+		let a=10;		//shows error:a is not declared.
+	const allows us to define constants.
+Do not use the var keyword inside a block (block scope). Always use let and const instead.
+

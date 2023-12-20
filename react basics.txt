@@ -1,0 +1,24 @@
+HTML
+	Layout and Style		-->	<html><head><body><div>
+	Text formatting and styles	-->	<h1....h6><p><ul....li><b><i>
+	images and links		-->	<img src=""><a href="">
+	Linking and meta		-->	<link><title><meta>
+	Semantic 			-->	<header>
+
+CSS
+	Font styling (font size, font color, etc.)
+	Flex Box Layout (Layout of items using CSS Flex Box Layout)
+	CSS Selectors
+	Position, Padding, Margins and Display 
+	Colors, Background and Icons 
+
+JS
+	Data types
+	Using var, let and const
+	Conditionals and Loops
+	Using objects, arrays and functions
+	ES6 Arrow functions 
+	In-built functions such as map(), forEach() and promises. 
+	Destructuring Arrays and Objects 
+	Error Handling 
+	Modules
