@@ -21,6 +21,12 @@ Js ES6 features
 	20) symbols
 	21) variables
 
+1) Arrow functions
+	let fun = () => {return "helloWorld"};
+	let fun = () => "helloWorld";		//the parathesis and return keyword can be neglected if our block contains only one statement
+	let fun = val => val*10;		//the closing brackets can be neglected if function contains single parameter, if there is no paramter we have use ().
+
+
 2) Classes
 	class hello{
 
@@ -148,10 +154,34 @@ but we cant let a="hello
 		10)string=array.join(",")		     ===>array to string
 	indexing  --  a[0] or a['0']
 
+
+13) Rest parameter
+	the function definition can have only one rest parameter, and it should be the last one in the arguments
+		ex) function add(...args){	//args is treated as array, we can apply array functions in args
+			let total=0;
+			for(let i in args)
+				total+=args[i];
+			return total;
+		}
+		console.log(add(1,2,3));
+		console.log(add(1,2,3,4,5,6));
+		
+		let fun = (a,b,..args){
+			let total=a+b;
+			for(i in args)
+				total+=args[i];
+		}
+		return total;
+
+
 14) spread operator(...)
 	used to pass an entire array or object to a function by not passing the array, copying one array to another array
 		we can assign a array to object		//{index:value}
 		we cant assign a object to array	//obj is not iterable
+	concatination
+		let a=[1,2,3];
+		let b=[4,5,6];
+		a=[...a,...b];
 
 
 16) let,const,var		(without any keyword it takes var as keyword)
